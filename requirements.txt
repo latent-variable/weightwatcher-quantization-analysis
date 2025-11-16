@@ -1,0 +1,28 @@
+# WeightWatcher Quantization Analysis
+# Requirements for analyzing how quantization affects alpha metrics
+
+# Core dependencies
+torch>=2.0.0
+transformers>=4.35.0
+weightwatcher>=0.7.0
+
+# Quantization support
+accelerate>=0.24.0
+bitsandbytes>=0.41.0  # Note: Limited Mac support, CUDA recommended
+
+# Data analysis and visualization
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Jupyter support
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+
+# Utilities
+tqdm>=4.65.0
+scipy>=1.10.0
+
+# Optional: For advanced plotting
+plotly>=5.14.0

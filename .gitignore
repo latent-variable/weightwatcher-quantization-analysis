@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model files and cache
+*.bin
+*.safetensors
+*.gguf
+*.pth
+*.pt
+models/
+checkpoints/
+
+# HuggingFace cache
+.cache/
+huggingface/
+
+# Results (keep structure, ignore large files)
+results/metrics/*.csv
+results/plots/*.png
+results/*.txt
+results/*.log
+
+# Logs
+*.log
+logs/
+nohup.out
+
+# Temporary files
+*.tmp
+tmp/
+temp/
