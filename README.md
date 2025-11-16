@@ -35,6 +35,51 @@ This analysis uses **naive symmetric linear quantization** as a conservative bas
 
 Production quantization methods (GGUF K-quants, MLX group quantization) use more sophisticated techniques and would likely show **less degradation** than reported here. These results represent a **conservative lower bound** on quantization quality.
 
+## 📊 Visualizations
+
+### Alpha Distributions Across Quantization Levels
+
+![Alpha Distributions](docs/images/alpha_distributions.png)
+
+*Distribution of alpha values for each quantization level. Green shaded area shows optimal range [2,6]. Red dashed line shows mean.*
+
+### Comparative Analysis
+
+<table>
+<tr>
+<td width="50%">
+
+**Boxplot Comparison**
+
+![Alpha Boxplot](docs/images/alpha_comparison_boxplot.png)
+
+*Clear progression showing quality degradation from 8-bit to 2-bit*
+
+</td>
+<td width="50%">
+
+**Statistics Summary**
+
+![Statistics Summary](docs/images/alpha_statistics_summary.png)
+
+*Key metrics: mean alpha, std dev, optimal range percentage, and alpha range*
+
+</td>
+</tr>
+</table>
+
+### Layer-wise Analysis
+
+![Layer-wise Comparison](docs/images/layerwise_alpha_comparison.png)
+
+*Alpha values for each layer across all quantization levels. Shows which layers are most affected by quantization.*
+
+### Spectral Properties
+
+![Spectral Norms](docs/images/spectral_norms_comparison.png)
+
+*Log spectral norm comparison showing how quantization affects weight matrix properties.*
+
 ## Overview
 
 WeightWatcher is a diagnostic tool that analyzes Deep Neural Networks without requiring training or test data. It computes the **alpha (α)** metric for each layer by analyzing the spectral properties of weight matrices. The alpha metric:

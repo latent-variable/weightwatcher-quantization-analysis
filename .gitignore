@@ -45,6 +45,9 @@ results/plots/*.png
 results/*.txt
 results/*.log
 
+# But keep docs/images for README
+!docs/images/
+
 # Logs
 *.log
 logs/
